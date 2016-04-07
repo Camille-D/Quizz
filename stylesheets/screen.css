@@ -90,30 +90,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: radial-gradient(ellipse at center, #cccccc 1%, #474747 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   min-height: 100vh;
+  transition: all 1s ease-in-out;
   position: absolute;
   padding: 0% 0% 5% 0%;
   -moz-box-shadow: 0px 0px 2px 2px black;
   -webkit-box-shadow: 0px 0px 2px 2px black;
   box-shadow: 0px 0px 2px 2px black;
 }
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .caroussel .page .question, .caroussel .test .question {
   text-align: center;
   padding: 50px;
   color: white;
 }
-/* line 48, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .caroussel .page .question h1, .caroussel .test .question h1 {
   font-size: 2.5em;
   text-shadow: 1px 1px 5px black;
 }
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .caroussel .page .question h3, .caroussel .test .question h3 {
   margin-top: 20px;
   font-size: 1.5em;
   text-shadow: 1px 1px 5px black;
 }
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .caroussel .page .choice, .caroussel .test .choice {
   display: -webkit-flex;
   display: flex;
@@ -122,7 +123,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 67, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .caroussel .page .choice input, .caroussel .test .choice input {
   -webkit-flex: 0 1 430px;
   flex: 0 1 430px;
@@ -141,7 +142,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 0px 5px black;
   box-shadow: 0px 0px 5px black;
 }
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .caroussel .page .com, .caroussel .test .com {
   width: 84%;
   margin-top: 50px;
@@ -152,7 +153,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-/* line 90, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .caroussel .page .com input:first-child, .caroussel .test .com input:first-child, .caroussel .page .com input:nth-child(2), .caroussel .test .com input:nth-child(2) {
   -webkit-flex: 0 1 200px;
   flex: 0 1 200px;

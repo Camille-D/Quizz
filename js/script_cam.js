@@ -16,8 +16,10 @@ $('.next').click(function(){
 
 	if (i <= indexPage){
 		$page.css('display', 'none');
+		$page.css('top:-1000px');
 		$currentPage = $page.eq(i);
 		$currentPage.css('display', 'flex');
+		$currentPage.css('top:0');
 	} else {
 		i = indexPage;
 	}

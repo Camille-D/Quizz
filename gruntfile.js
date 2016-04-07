@@ -13,7 +13,7 @@ module.exports = function(grunt){
 	uglify: {
 	    my_target: {
 	      options: {
-	        sourceMap: true,
+	        sourceMap: false,
 	        sourceMapName: 'path/to/sourcemap.map'
 	      },
 	      files: {
@@ -57,7 +57,7 @@ module.exports = function(grunt){
 
 	watch: {
 	  css: {
-	    files: ['index.jade','sass/*.scss','js/*.js','!js/minJS.js'],
+	    files: ['index.jade','sass/*.scss','js/*.js','!js/minJS.js', '!js/jquery-2.2.3.min.js'],
 	    tasks: ['wip'],
 	    options: {
 	      spawn: false,
