@@ -1,51 +1,80 @@
+// $(document).ready(function () {
+  
+// 	reponses = [
+// 				    [0,1,0,0],
+// 				    [0,0,1,0],
+// 				    [1,0,0,0]
+// 				    			];
+// 	$reponseUser = $('.next'); 
+
+  
+// 	$reponseUser.click(function() {
+	  	
+// 	  	sInputs = $('.sel');
+
+// 	  	setTimeout(function() {
+
+	  
+
+// 			  for (var id = 0; id<sInputs.length;id++) {
+
+// 				if(sInputs[id].name == reponses[0][1]) { 
+			    
+// 			     		 $(sInputs[id]).addClass('trueAns');
+			    
+// 			  	  } else if (sInputs[id].name != reponses[0][1]) {
+			    
+// 			    		  $(sInputs[id]).addClass('falseAns');
+// 			   	}
+// 			}
+
+
+// 	  	},1000);
+	  
+
+// 	});
+
+// });
+
+
 $(document).ready(function () {
   
-  $reponses = ["Answer 3"]; // stocker dans un tableau toutes les réponses possibles
-  $reponseUser = $('.next'); // sélection du bouton cliqué
-  /* $next = $('.btnNext'); */
+	reponses = [
+				    [0,1,0,0],
+				    [0,0,1,0],
+				    [1,0,0,0]
+				    			];
 
   
-  $reponseUser.click(function() {
-  	
-  	e = $('.sel');
+	$('.next').click(function() {
+	  	
+	  	sInputs = $('.sel');
 
-  	
-  	
-  	setTimeout(function() {
+	  	setTimeout(function() {
 
-  
-    
-  for (var id = 0; id<e.length;id++) {
-
-    if(e[id].value == $reponses[0]) { // vérif si les deux réponses sont identiques
-    
-      $(e[id]).toggleClass('trueAns');
-    
-    } else if (e[id].value != $reponses[0]) {
-    
-      $(e[id]).toggleClass('falseAns');
-    }
-    }
-
-
-  	},2000);
-  
+			  for (var id = 0; id<4;id++) {
 
 
 
+					if( 0 === reponses[page][1]) { 
+					    
+					     		$(sInputs[id]).addClass('trueAns');
+					    
+					  	  } else if ( 0 !== reponses[page][1]) {
+					    
+					    		 $(sInputs[id]).addClass('falseAns');
+					   	}
+	
 
-    // $index +=1; // incrémentation pour se déplacer dans array tableau
-  });
+			}
 
 
+	  	},1000);
+	  
 
-
-
-
+	});
 
 });
-
-
 
 
 
