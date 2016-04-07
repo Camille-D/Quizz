@@ -13,16 +13,7 @@ $currentPage.css('display', 'flex');// affiche la page courante
 
 $('.next').click(function(){
 	i++;
-
-	if (i <= indexPage){
-		$page.css('display', 'none');
-		$page.css('top:-1000px');
-		$currentPage = $page.eq(i);
-		$currentPage.css('display', 'flex');
-		$currentPage.css('top:0');
-	} else {
-		i = indexPage;
-	}
+	setTimeout(nextPage,3000);
 });
 
 $('.prev').click(function(){
@@ -37,4 +28,19 @@ $('.prev').click(function(){
 	}
 });
 
+
+function nextPage() {
+		
+
+	if (i <= indexPage){
+		$page.css('display', 'none');
+		$currentPage = $page.eq(i);
+		$currentPage.css('display', 'flex');
+	} else {
+		i = indexPage;
+	}
+}
+
 });
+
+
