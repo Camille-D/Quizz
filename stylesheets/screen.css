@@ -63,12 +63,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 7, ../sass/screen.scss */
+/* line 5, ../sass/screen.scss */
+.sel {
+  color: white;
+  background-color: #333 !important;
+}
+
+/* line 11, ../sass/screen.scss */
 .caroussel {
   font-family: sans-serif;
   width: 100%;
 }
-/* line 12, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 .caroussel .page, .caroussel .page2 {
   width: 100%;
   display: -webkit-flex;
@@ -92,24 +98,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 0px 2px 2px black;
   box-shadow: 0px 0px 2px 2px black;
 }
-/* line 28, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .caroussel .page .question, .caroussel .page2 .question {
   text-align: center;
   padding: 50px;
   color: white;
 }
-/* line 32, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .caroussel .page .question h1, .caroussel .page2 .question h1 {
   font-size: 2.5em;
   text-shadow: 1px 1px 5px black;
 }
-/* line 36, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .caroussel .page .question h3, .caroussel .page2 .question h3 {
   margin-top: 20px;
   font-size: 1.5em;
   text-shadow: 1px 1px 5px black;
 }
-/* line 44, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .caroussel .page .choice, .caroussel .page2 .choice {
   display: -webkit-flex;
   display: flex;
@@ -118,7 +124,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 51, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .caroussel .page .choice input, .caroussel .page2 .choice input {
   -webkit-flex: 0 1 430px;
   flex: 0 1 430px;
@@ -137,12 +143,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 0px 5px black;
   box-shadow: 0px 0px 5px black;
 }
-/* line 62, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .caroussel .page .choice input:focus, .caroussel .page2 .choice input:focus {
   outline: none;
   outline-style: none;
 }
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .caroussel .page .com, .caroussel .page2 .com {
   width: 84%;
   margin-top: 50px;
@@ -153,7 +159,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-/* line 77, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .caroussel .page .com input:first-child, .caroussel .page2 .com input:first-child, .caroussel .page .com input:nth-child(2), .caroussel .page2 .com input:nth-child(2) {
   -webkit-flex: 0 1 200px;
   flex: 0 1 200px;
@@ -172,16 +178,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 0px 2px black;
   box-shadow: 0px 0px 2px black;
 }
-/* line 88, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .caroussel .page .com input:first-child:focus, .caroussel .page2 .com input:first-child:focus, .caroussel .page .com input:focus:nth-child(2), .caroussel .page2 .com input:focus:nth-child(2) {
   outline: none;
   outline-style: none;
-}
-
-/* line 108, ../sass/screen.scss */
-.sel {
-  color: white;
-  background-color: #333 !important;
 }
 
 /* line 115, ../sass/screen.scss */

@@ -1,6 +1,9 @@
 $(document).ready(function () {
   
 
+  /////////////////////////////////////////////////////////////// CODE CAMILLE ///////////////////////////////////////////////////////////////
+
+
 	var $carrousel = $('.carrousel'),
 		$page = $('.page'),
 		indexPage = $page.length - 1, //dernier index de la page 
@@ -43,7 +46,7 @@ $(document).ready(function () {
 		}
 	}
 
-/////////////////////////////// CODE CECILE ////////////////////////////
+/////////////////////////////////////////////////////////////// CODE CECILE ///////////////////////////////////////////////////////////////
 	
 
 	reponses = [
@@ -90,77 +93,34 @@ $(document).ready(function () {
 			
 			}
 
-
-
-
-
 	  	},1000);
 	  
+	});
+
+/////////////////////////////////////////////////////////////// CODE YOYO ///////////////////////////////////////////////////////////////
+
+	// var inputs = $(".choice input");
+
+	$(".com input.next").prop("disabled", true);
+
+	$(".choice input").click(function(){
+		
+		console.log(this);
+
+		$(this).toggleClass("sel");
+
+		$(".com input.next").prop("disabled", false);
+
+
+	
 
 	});
+
 
 });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function () {
-
-
-
-
-
-
-
-
-  
-// 	reponses = [
-// 				    [0,1,0,0],
-// 				    [0,0,1,0],
-// 				    [1,0,0,0]
-// 				    			];
-
-  
-// 	$('.next').click(function() {
-	  	
-// 	  	sInputs = $('.sel');
-
-// 	  	setTimeout(function() {
-
-// 			  for (var id = 0; id<4;id++) {
-
-
-
-// 						if( 0 === reponses[page][1]) { 
-					    
-// 					     		$(sInputs[id]).addClass('trueAns');
-					    
-// 					  	  } else if ( 0 !== reponses[page][1]) {
-					    
-// 					    		 $(sInputs[id]).addClass('falseAns');
-// 					   	}
-	
-
-// 			}
-
-
-// 	  	},1000);
-	  
-
-// 	});
-
-// });
 
 
 
