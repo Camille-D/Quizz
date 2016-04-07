@@ -63,19 +63,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 5, ../sass/screen.scss */
+/*//////////////////////////////////////////*/
+/*//////////////////////////////////////////*/
+/* line 36, ../sass/screen.scss */
 .sel {
   color: white;
   background-color: #333 !important;
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .caroussel {
   font-family: sans-serif;
   width: 100%;
 }
-/* line 16, ../sass/screen.scss */
-.caroussel .page, .caroussel .page2 {
+/* line 47, ../sass/screen.scss */
+.caroussel .page, .caroussel .page2, .caroussel .result {
   width: 100%;
   display: -webkit-flex;
   display: flex;
@@ -98,25 +100,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 0px 2px 2px black;
   box-shadow: 0px 0px 2px 2px black;
 }
-/* line 32, ../sass/screen.scss */
-.caroussel .page .question, .caroussel .page2 .question {
+/* line 63, ../sass/screen.scss */
+.caroussel .page .question, .caroussel .page2 .question, .caroussel .result .question {
   text-align: center;
-  padding: 50px;
+  padding: 50px 50px 50px 50px;
   color: white;
 }
-/* line 36, ../sass/screen.scss */
-.caroussel .page .question h1, .caroussel .page2 .question h1 {
+/* line 67, ../sass/screen.scss */
+.caroussel .page .question h1, .caroussel .page2 .question h1, .caroussel .result .question h1 {
   font-size: 2.5em;
   text-shadow: 1px 1px 5px black;
 }
-/* line 40, ../sass/screen.scss */
-.caroussel .page .question h3, .caroussel .page2 .question h3 {
+@media (min-width: 421px) and (max-width: 949px) {
+  /* line 67, ../sass/screen.scss */
+  .caroussel .page .question h1, .caroussel .page2 .question h1, .caroussel .result .question h1 {
+    padding: 20px 20px;
+  }
+}
+/* line 74, ../sass/screen.scss */
+.caroussel .page .question h3, .caroussel .page2 .question h3, .caroussel .result .question h3 {
   margin-top: 20px;
   font-size: 1.5em;
   text-shadow: 1px 1px 5px black;
 }
-/* line 48, ../sass/screen.scss */
-.caroussel .page .choice, .caroussel .page2 .choice {
+@media (min-width: 421px) and (max-width: 949px) {
+  /* line 74, ../sass/screen.scss */
+  .caroussel .page .question h3, .caroussel .page2 .question h3, .caroussel .result .question h3 {
+    margin-top: 0;
+  }
+}
+@media (min-width: 421px) and (max-width: 949px) {
+  /* line 63, ../sass/screen.scss */
+  .caroussel .page .question, .caroussel .page2 .question, .caroussel .result .question {
+    padding: 20px 20px;
+  }
+}
+/* line 88, ../sass/screen.scss */
+.caroussel .page .choice, .caroussel .page2 .choice, .caroussel .result .choice {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
@@ -124,8 +144,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 55, ../sass/screen.scss */
-.caroussel .page .choice input, .caroussel .page2 .choice input {
+/* line 95, ../sass/screen.scss */
+.caroussel .page .choice input, .caroussel .page2 .choice input, .caroussel .result .choice input {
   -webkit-flex: 0 1 430px;
   flex: 0 1 430px;
   display: -webkit-flex;
@@ -136,20 +156,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   align-items: center;
   background-color: #CCC;
   margin: 15px 20px;
-  padding: 55px;
+  padding: 55px 55px;
   border: 1px solid black;
   font-size: 1.2em;
   -moz-box-shadow: 0px 0px 5px black;
   -webkit-box-shadow: 0px 0px 5px black;
   box-shadow: 0px 0px 5px black;
 }
-/* line 66, ../sass/screen.scss */
-.caroussel .page .choice input:focus, .caroussel .page2 .choice input:focus {
+/* line 106, ../sass/screen.scss */
+.caroussel .page .choice input:focus, .caroussel .page2 .choice input:focus, .caroussel .result .choice input:focus {
   outline: none;
   outline-style: none;
 }
-/* line 74, ../sass/screen.scss */
-.caroussel .page .com, .caroussel .page2 .com {
+@media (min-width: 421px) and (max-width: 949px) {
+  /* line 95, ../sass/screen.scss */
+  .caroussel .page .choice input, .caroussel .page2 .choice input, .caroussel .result .choice input {
+    padding: 30px 55px;
+    margin: 15px 20px;
+  }
+}
+@media (min-width: 0px) and (max-width: 520px) {
+  /* line 95, ../sass/screen.scss */
+  .caroussel .page .choice input, .caroussel .page2 .choice input, .caroussel .result .choice input {
+    padding: 17px 55px;
+    margin: 10px 20px;
+  }
+}
+/* line 122, ../sass/screen.scss */
+.caroussel .page .com, .caroussel .page2 .com, .caroussel .result .com {
   width: 84%;
   margin-top: 50px;
   display: -webkit-flex;
@@ -159,8 +193,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-/* line 81, ../sass/screen.scss */
-.caroussel .page .com input:first-child, .caroussel .page2 .com input:first-child, .caroussel .page .com input:nth-child(2), .caroussel .page2 .com input:nth-child(2) {
+/* line 129, ../sass/screen.scss */
+.caroussel .page .com input:first-child, .caroussel .page2 .com input:first-child, .caroussel .result .com input:first-child, .caroussel .page .com input:nth-child(2), .caroussel .page2 .com input:nth-child(2), .caroussel .result .com input:nth-child(2) {
   -webkit-flex: 0 1 200px;
   flex: 0 1 200px;
   display: -webkit-flex;
@@ -178,23 +212,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 0px 2px black;
   box-shadow: 0px 0px 2px black;
 }
-/* line 92, ../sass/screen.scss */
-.caroussel .page .com input:first-child:focus, .caroussel .page2 .com input:first-child:focus, .caroussel .page .com input:focus:nth-child(2), .caroussel .page2 .com input:focus:nth-child(2) {
+/* line 140, ../sass/screen.scss */
+.caroussel .page .com input:first-child:focus, .caroussel .page2 .com input:first-child:focus, .caroussel .result .com input:first-child:focus, .caroussel .page .com input:focus:nth-child(2), .caroussel .page2 .com input:focus:nth-child(2), .caroussel .result .com input:focus:nth-child(2) {
   outline: none;
   outline-style: none;
 }
+@media (min-width: 0px) and (max-width: 520px) {
+  /* line 122, ../sass/screen.scss */
+  .caroussel .page .com, .caroussel .page2 .com, .caroussel .result .com {
+    margin-top: 20px;
+  }
+}
+/* line 161, ../sass/screen.scss */
+.caroussel .result {
+  background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #55C 100%) !important;
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #C7C7C7 1%, #55C 100%) !important;
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #c7c7c7 1%, #5555cc 100%) !important;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
-/* line 115, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .falseAns {
   background-color: red !important;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .trueAns {
   background-color: green !important;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .trueAnsBack {
   background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #2C0 100%) !important;
   /* FF3.6-15 */
@@ -204,7 +253,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .falseAnsBack {
   background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #C20 100%) !important;
   /* FF3.6-15 */
@@ -212,4 +261,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #c7c7c7 1%, #cc2200 100%) !important;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* line 194, ../sass/screen.scss */
+.start {
+  -webkit-flex: 0 1 430px;
+  flex: 0 1 430px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #CCC;
+  margin: 15px 20px;
+  padding: 20px;
+  border: 1px solid black;
+  font-size: 1.2em;
+  -moz-box-shadow: 0px 0px 5px black;
+  -webkit-box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 0px 5px black;
+}
+/* line 205, ../sass/screen.scss */
+.start:focus {
+  outline: none;
+  outline-style: none;
 }

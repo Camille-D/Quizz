@@ -2,6 +2,37 @@
 @import "compass/reset";
 @import "compass";
 
+
+/*//////////////////////////////////////////*//////////////////////////////////////////////////////
+
+
+$tablet-width: 421px;
+$desktop-width: 950px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: 0px) and (max-width: 520px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+
+/*//////////////////////////////////////////*//////////////////////////////////////////////////////
+
+
+
 .sel {
 	color:white;
 	background-color:#333 !important;
@@ -27,21 +58,30 @@
 		position:absolute;
 		padding:0% 0% 5% 0%;
 		@include prefixed-properties(css-boxshadow, $box-shadow-support-threshold, (box-shadow: 0px 0px 2px  2px black));
-		
+	
 
 		.question {
 			text-align: center;
-			padding:50px;
+			padding:50px 50px 50px 50px;
 			color:white;
 			h1 {
 				font-size: 2.5em;
 				@include text-shadow(1px 1px 5px black);
+				@include tablet {
+					padding:20px 20px;
+				}
 			}
 				h3 {
 					margin-top:20px;
 					font-size:1.5em;
 					@include text-shadow(1px 1px 5px black);
+					@include tablet {
+						margin-top:0;
+					}
 				}
+			@include tablet {
+				padding:20px 20px;
+			}		
 		}
 
 
@@ -59,13 +99,21 @@
 				@include align-items(center);
 				background-color: #CCC;
 				margin:15px 20px;
-				padding:55px;
+				padding:55px 55px;
 				border:1px solid black;
 				font-size:1.2em;
 				@include prefixed-properties(css-boxshadow, $box-shadow-support-threshold, (box-shadow: 0px 0px 5px black));
 				&:focus {
 					outline:none;
 					outline-style:none;
+				}
+				@include tablet {
+					padding:30px 55px;
+					margin:15px 20px;
+				}
+				@include phone {
+					padding:17px 55px;
+					margin:10px 20px;
 				}
 			}
 		}
@@ -94,6 +142,9 @@
 					outline-style:none;
 				}
 			}
+			@include phone {
+				margin-top:20px;
+			}
 
 
 			input:nth-child(2){
@@ -105,6 +156,13 @@
 
 	.page2 {
 		@extend .page;
+	}
+
+	.result {
+		@extend .page;
+		background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #55C 100%) !important; /* FF3.6-15 */
+		background: -webkit-radial-gradient(center, ellipse cover, #C7C7C7 1%,#55C 100%) !important; /* Chrome10-25,Safari5.1-6 */
+		background: radial-gradient(ellipse at center, #C7C7C7 1%,#55C 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */	
 	}
 }
 
@@ -133,28 +191,19 @@
 	background: radial-gradient(ellipse at center, #C7C7C7 1%,#C20 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.start {
+	@include flex(0 1 430px);
+	@include display-flex;
+	@include justify-content(center);
+	@include align-items(center);
+	background-color: #CCC;
+	margin:15px 20px;
+	padding:20px;
+	border:1px solid black;
+	font-size:1.2em;
+	@include prefixed-properties(css-boxshadow, $box-shadow-support-threshold, (box-shadow: 0px 0px 5px black));
+	&:focus {
+		outline:none;
+		outline-style:none;
+	}
+}

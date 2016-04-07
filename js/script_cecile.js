@@ -5,12 +5,14 @@ $(document).ready(function () {
 
 
 	var $carrousel = $('.carrousel'),
-		$page = $('.page'),
-		indexPage = $page.length - 1, //dernier index de la page 
+		page = $('.page'),
+		indexPage = page.length - 1, //dernier index de la page 
 		i = 0,
-		currentPage = $page.eq(i);
+		currentPage = page.eq(i);
 
-	$page.css('display', 'none');//cache les pages
+
+
+	page.css('display', 'none');//cache les pages
 	currentPage.css('display', 'flex');// affiche la page courante
 
 
@@ -25,8 +27,8 @@ $(document).ready(function () {
 		i--;
 
 		if (i >= 0) {				
-			$page.css('display', 'none');
-			currentPage = $page.eq(i);
+			page.css('display', 'none');
+			currentPage = page.eq(i);
 			currentPage.css('display', 'flex');
 		} else {
 			i = 0;
@@ -38,8 +40,8 @@ $(document).ready(function () {
 			
 
 		if (i <= indexPage){
-			$page.css('display', 'none');
-			currentPage = $page.eq(i);
+			page.css('display', 'none');
+			currentPage = page.eq(i);
 			currentPage.css('display', 'flex');
 		} else {
 			i = indexPage;
@@ -74,12 +76,8 @@ $(document).ready(function () {
 			  	}
 
 
-
-			  		// console.log(seInputs[id]);
-			  		// console.log(reponses[i-1][id]);
 			
 				if (seInputs[id] === reponses[i-1][id] && seInputs[id] !== 0 && reponses[i-1][id] !== 0) {
-					console.log(reponses[i-1][id]);
 					$(evInputs[id]).addClass('trueAns');
 					currentPage.addClass("trueAnsBack");
 			
@@ -98,23 +96,63 @@ $(document).ready(function () {
 	});
 
 /////////////////////////////////////////////////////////////// CODE YOYO ///////////////////////////////////////////////////////////////
-
-	// var inputs = $(".choice input");
+	
+	all_inputs = $('.choice input');
 
 	$(".com input.next").prop("disabled", true);
 
 	$(".choice input").click(function(){
 		
-		console.log(this);
 
 		$(this).toggleClass("sel");
 
-		$(".com input.next").prop("disabled", false);
+		evInputs = currentPage[0].children[1].children;
+		inputCount = 3;
+
+		for (var all = 0; all < evInputs.length;all++) {
+			
+			if (evInputs[all].className == "sel"){
+				inputCount++;
+
+			} else if (evInputs[all].className !== "sel") {
+				inputCount--;
+			}
+
+		}
+			if (inputCount > 0) {
+				$(".com input.next").prop("disabled", false);
+			} else {
+				$(".com input.next").prop("disabled", true);
+			}
 
 
-	
+			
 
 	});
+
+	$(".start").click(function() {
+
+		i=0;
+		reset();
+		nextPage();
+
+
+	});
+
+	function reset() {
+
+		$(".com input.next").prop("disabled", true);
+
+		for(var po in page) {
+			page[po].className = "page";
+		}
+
+		for (var op in all_inputs) {
+			all_inputs[op].className = "";
+		}
+
+	}
+
 
 
 });
