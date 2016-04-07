@@ -93,7 +93,7 @@
 
 
 			input:nth-child(2){
-				@extend input:first-child;
+				@extend input:first-child; 
 			}	
 		}
 	}
@@ -118,6 +118,19 @@
 
 .trueAns {
 	background-color: green !important;
+}
+
+.trueAnsBack {
+	background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #2C0 100%) !important; /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #C7C7C7 1%,#2C0 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #C7C7C7 1%,#2C0 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+.falseAnsBack {
+	background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #C20 100%) !important; /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #C7C7C7 1%,#C20 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #C7C7C7 1%,#C20 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 

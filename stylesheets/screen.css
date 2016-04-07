@@ -193,3 +193,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .trueAns {
   background-color: green !important;
 }
+
+/* line 123, ../sass/screen.scss */
+.trueAnsBack {
+  background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #2C0 100%) !important;
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #C7C7C7 1%, #2C0 100%) !important;
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #c7c7c7 1%, #22cc00 100%) !important;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* line 130, ../sass/screen.scss */
+.falseAnsBack {
+  background: -moz-radial-gradient(center, ellipse cover, #C7C7C7 1%, #C20 100%) !important;
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #C7C7C7 1%, #C20 100%) !important;
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #c7c7c7 1%, #cc2200 100%) !important;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
