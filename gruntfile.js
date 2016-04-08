@@ -14,10 +14,11 @@ module.exports = function(grunt){
 	    my_target: {
 	      options: {
 	        sourceMap: false,
-	        sourceMapName: 'path/to/sourcemap.map'
+	        sourceMapName: 'path/to/sourcemap.map',
+	        mangle: false
 	      },
 	      files: {
-	        'js/minJS.js': ['js/script.js','js/script2.js']
+	        'js/minJS.js': ['js/script.js']
 	      }
 	    }
 	  },

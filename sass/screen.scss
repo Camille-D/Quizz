@@ -41,22 +41,22 @@ $desktop-width: 950px;
 
 .caroussel {
 	font-family:sans-serif;
-	width:100%;
+	// width:100%;
 
 
 	.page {
 		// margin:0 auto;
 		width:100%;
 		@include display-flex;
-		@include justify-content(center);
+		@include justify-content(space-around);
 		@include align-items(center);
 		@include flex-flow(column wrap);
 		background: -moz-radial-gradient(center, ellipse cover, #CCC 1%, #474747 100%); /* FF3.6-15 */
 		background: -webkit-radial-gradient(center, ellipse cover, #CCC 1%,#474747 100%); /* Chrome10-25,Safari5.1-6 */
 		background: radial-gradient(ellipse at center, #CCC 1%,#474747 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		min-height:100vh;
+		min-height:96vh;
 		position:absolute;
-		padding:0% 0% 5% 0%;
+		padding:0% 0% 40px 0%;
 		@include prefixed-properties(css-boxshadow, $box-shadow-support-threshold, (box-shadow: 0px 0px 2px  2px black));
 	
 
@@ -80,8 +80,11 @@ $desktop-width: 950px;
 					}
 				}
 			@include tablet {
-				padding:20px 20px;
+				padding:20px 20px 50px 20px;
 			}		
+			@include phone {
+				padding:10px;
+			}
 		}
 
 
@@ -89,7 +92,8 @@ $desktop-width: 950px;
 			@include display-flex;
 			@include flex-flow(row wrap);
 			@include justify-content(center);
-
+			max-width:1000px;
+	
 
 
 			input {
@@ -100,6 +104,7 @@ $desktop-width: 950px;
 				background-color: #CCC;
 				margin:15px 20px;
 				padding:55px 55px;
+				// height:100px;
 				border:1px solid black;
 				font-size:1.2em;
 				@include prefixed-properties(css-boxshadow, $box-shadow-support-threshold, (box-shadow: 0px 0px 5px black));
@@ -112,7 +117,7 @@ $desktop-width: 950px;
 					margin:15px 20px;
 				}
 				@include phone {
-					padding:17px 55px;
+					padding:17px 0px;
 					margin:10px 20px;
 				}
 			}
@@ -121,7 +126,7 @@ $desktop-width: 950px;
 
 		.com {
 			width: 84%;
-			margin-top:50px;
+			margin-top:0px;
 			@include display-flex;
 			@include flex-flow(row nowrap);
 			@include justify-content(space-around);

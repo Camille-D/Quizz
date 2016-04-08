@@ -10,36 +10,60 @@ html(lang="en")
 			div.page
 				div.question
 					h1 QUESTION 1
-					h3 Text of the first question .......... ?
+					h3 Quelle balise permet la liaison d'un fichier javascript à une page HTML ?
 				div.choice
-					input(type="button" value="Answer 1") 
-					input(type="button" value="Answer 2")
-					input(type="button" value="Answer 3")
-					input(type="button" value="Answer 4")
+					input(type="button" value="<script>") 
+					input(type="button" value="<javascript>")
+					input(type="button" value="<scripting>")
+					input(type="button" value="<js>")
 				div.com
 					input(type="button" class="prev" value="<< Previous")
 					input(type="button" class="next" value="Next >>")
 			div.page.page2
 				div.question
 					h1 QUESTION 2
-					h3 Text of the first question .......... ?
+					h3 Quelle est la meilleur place pour insérer la balise javascript?
 				div.choice
-					input(type="button" value="Answer 1") 
-					input(type="button" value="Answer 2")
-					input(type="button" value="Answer 3")
-					input(type="button" value="Answer 4")
+					input(type="button" value="Dans la section <body> ") 
+					input(type="button" value="Dans la section <head>")
+					input(type="button" value="Entre la balise <head> et <body>")
+					input(type="button" value="Aprés la balise <body>")
 				div.com
 					input(type="button" class="prev" value="<< Previous")
 					input(type="button" class="next" value="Next >>")
 			div.page.page3
 				div.question
 					h1 QUESTION 3
-					h3 Text of the first question .......... ?
+					h3 Comment afficher "Hello World" dans une boite de dialogue?     
 				div.choice
-					input(type="button" value="Answer 1") 
-					input(type="button" value="Answer 2")
-					input(type="button" value="Answer 3")
-					input(type="button" value="Answer 4")
+					input(type="button" value="alertBox('Hello World')") 
+					input(type="button" value="msg('Hello World');")
+					input(type="button" value="alert('Hello World');")
+					input(type="button" value="msgBox('Hello World')")
+				div.com
+					input(type="button" class="prev" value="<< Previous")
+					input(type="button" class="next" value="Next >>")
+			div.page.page4
+				div.question
+					h1 QUESTION 4
+					h3 Quels sont les types de nombres définis en JavaScript ?     
+				div.choice
+					input(type="button" value="Integer et Float") 
+					input(type="button" value="Number")
+					input(type="button" value="Number et Double")
+					input(type="button" value="Number et Integer")
+				div.com
+					input(type="button" class="prev" value="<< Previous")
+					input(type="button" class="next" value="Next >>")
+			div.page.page4
+				div.question
+					h1 QUESTION 5
+					h3 Quels sont les types de nombres définis en JavaScript ?     
+				div.choice
+					input(type="button" value="Dans la section <body> ") 
+					input(type="button" value="Dans la section <head>")
+					input(type="button" value="Entre la balise <head> et <body>")
+					input(type="button" value="Aprés la balise <body>")
 				div.com
 					input(type="button" class="prev" value="<< Previous")
 					input(type="button" class="next" value="Next >>")
@@ -64,6 +88,6 @@ html(lang="en")
 
 
 		script(src="js/jquery-2.2.3.min.js")
-		script(src='js/script_cecile.js')
+		script(src='js/minJS.js')
 		
 	
